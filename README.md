@@ -1,4 +1,4 @@
-#Arch-Hyprland-quickshell初学者指南
+# Arch-Hyprland-quickshell初学者指南
 -----
 Step 1  准备系统盘iso文件，已经格式化了的移动硬盘
 Step 2 uefi 启动系统盘，开始安装系统
