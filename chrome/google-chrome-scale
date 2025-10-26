@@ -1,0 +1,38 @@
+#!/bin/bash
+# Wrapper to launch Google Chrome with forced device scale factor and isolated profile
+SCALE="1.6"
+CHROME_EXEC="/usr/bin/google-chrome-stable"
+USER_DATA_DIR="$HOME/.config/google-chrome-scaled"
+
+# parse simple overrides
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --scale)
+      SCALE="$2"; shift 2;;
+    --exec-path)
+      CHROME_EXEC="$2"; shift 2;;
+    --help|-h)
+      echo "Usage: $0 [--scale FACTOR] [--exec-path PATH] [chrome-args]"; exit 0;;
+    *)
+      break;;
+  esac
+done
+
+mkdir -p "$USER_DATA_DIR"
+
+if [[ ! -x "$CHROME_EXEC" ]]; then
+  if [[ -x "/opt/google/chrome/chrome" ]]; then
+    CHROME_EXEC="/opt/google/chrome/chrome"
+  elif command -v google-chrome >/dev/null 2>&1; then
+    CHROME_EXEC=$(command -v google-chrome)
+  elif command -v google-chrome-stable >/dev/null 2>&1; then
+    CHROME_EXEC=$(command -v google-chrome-stable)
+  fi
+fi
+
+if [[ ! -x "$CHROME_EXEC" ]]; then
+  echo "Chrome executable not found: $CHROME_EXEC" >&2
+  exit 2
+fi
+
+exec "$CHROME_EXEC" --force-device-scale-factor=${SCALE} --high-dpi-support=1 --user-data-dir="$USER_DATA_DIR" "$@"

@@ -1,0 +1,37 @@
+{
+  "name": "lemuen-darksakura-darkpink-theme",
+  "displayName": "Lemuen Darksakura Darkpink Theme",
+  "description": "A custom sakura pink and dark theme with clean design",
+  "version": "1.0.0",
+  "publisher": "yumiaoyi-o",
+  "author": {
+    "name": "yumiaoyi-o"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yumiaoyi-o/lemuen-darksakura-darkpink-theme"
+  },
+  "keywords": [
+    "theme",
+    "dark",
+    "pink",
+    "clean",
+    "minimal"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lemuen Darksakura Darkpink Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lemuen-darksakura-darkpink-theme.json"
+      }
+    ]
+  }
+}

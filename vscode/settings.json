@@ -1,0 +1,92 @@
+{
+    "workbench.colorTheme": "Lemuen Darksakura Darkpink Theme",
+    "window.zoomLevel": 2,
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+    "chat.editing.confirmEditRequestRetry": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX 编译",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.message.error.show": true,
+    "latex-workshop.message.warning.show": true,
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.synctex.gz"
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.recipe.default": "XeLaTeX 编译",
+    "explorer.confirmDelete": false,
+    "workbench.editor.empty.hint": "hidden",
+    "jupyter.askForKernelRestart": false,
+    "python.terminal.activateEnvironment": true,
+    "python.condaPath": "/opt/miniconda3/condabin/conda",
+    "explorer.confirmDragAndDrop": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "chat.editing.confirmEditRequestRemoval": false,
+    "python.createEnvironment.trigger": "off",
+    "chat.tools.terminal.autoApprove": {
+        "with open('MoS2_dataset/processed/677/orbital_types.dat') as f:\n    rows677 = [line.strip().split() for line in f if line.strip()]\nlen(rows677), Counter(len(r) for r in rows677)": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "with": true
+    },
+    "terminal.integrated.fontSize": 15,
+    "editor.fontSize": 16,
+    "editor.cursorBlinking": "smooth",
+    "editor.fontLigatures": false
+}
